@@ -1,3 +1,7 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Linq.Enumerable;
 namespace Name
 {
     public class Employee : 
@@ -16,6 +20,25 @@ namespace Name
         Employee employee3=new Employee(){Field1=12945,Field2="JohnThree",Field3=85700,Field4="catthree",Field5="pencap"};
         Employee employee4=new Employee(){Field1=13345,Field2="JohnFour",Field3=19600,Field4="catfour",Field5="penwire"};
         Employee employee5=new Employee(){Field1=12349,Field2="JohnFive",Field3=56070,Field4="catfive",Field5="penphone"};
+        myDict.Add(23,employee1);
+        myDict.Add(15,employee5);
+        myDict.Add(12,employee4);
+        myDict.Add(19,employee3);
+        myDict.Add(17,employee2);
+
+        Console.WriteLine("before...");
+        foreach(Employee employee in myDict.Values){
+            Console.WriteLine($"{employee.Field1}--{employee.Field2}--{employee.Field3}--{employee.Field4}--{employee.Field5}");
+        }
+                          
+        //sorting dictionary using  linq                		
+        var mydict1=from item in myDict orderby item.Value.Field1 ascending select item;
+        Console.WriteLine("after...");
+        foreach(Employee employee in myDict.Values){
+        Console.WriteLine($"{employee.Field1}--{employee.Field2}--{employee.Field3}--{employee.Field4}--{employee.Field5}");
+        }
+        
+        //sorting using eunemarable
         
        }
     }
