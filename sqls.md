@@ -45,9 +45,10 @@ select CUSTOMER_ID,CUSTOMER_NAME,month(DATE_OF_BIRTH)
 from CUSTOMER
 where ADDRESS not like '%street%'
 order by CUSTOMER_ID desc;
-```sql
+```
 movie released in month---movie ticket booking
 -----------------------------------------------
+```sql
 select contact(m.MOVIE_NAME," released on ",month(s.FROM_DATE)) as MOVIE_MOINTH from MOVIE_MASTER m
 join SCREENING_MASTER s on m.MOVIE_ID=s.MOVIE_ID
 order by MOVIE_MONTH;
