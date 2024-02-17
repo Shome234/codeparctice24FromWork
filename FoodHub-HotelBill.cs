@@ -123,3 +123,17 @@ namespace FoodHub
     }
 
 }
+/*
+public static List<HotelBill> billList=new List<HotelBill>();
+    public List<HotelBill> GetBillDetails(string billNo){
+        return billList.Where(i=>i.BillNo==billNo).Select(i=>i).ToList();
+    }
+    public List<HotelBill> UpdateBillStatus(string billNo,string status){
+        return billList.Where(i=>i.BillNo==billNo).Select((i)=>{
+            i.Status=status;
+            return i;
+        }).ToList();
+    }
+    public List<HotelBill> SortBilllByStatus(){
+        return billList.OrderByDescending(i=>i.Status).Select(i=>i).ToList();
+    }*/
