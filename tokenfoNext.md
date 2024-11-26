@@ -26,3 +26,15 @@ getCookies.set("access_token",accessToken);
 }
 }
 ```
+
+```ts
+export async function POST(req:Request){
+	const {}=await req.json();
+  const cook=req.cookies.get();
+	const {data:user}=useSession();
+	if(!title) throw new Error("Please provide an title to continue");
+	const catObj=new Category(title:title,createdBy:user._id);
+	const newcategory=await Category.create(catObj);
+	return Response.json({success:true,status:200,data:Category.findById(newCategory._id)};
+}
+```
